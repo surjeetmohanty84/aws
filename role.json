@@ -1,0 +1,24 @@
+{
+    "Version": "2012",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:List*",
+                "dynamodb:GetShardIterator",
+                "dynamodb:GetRecords",
+                "dynamodb:DescribeStream",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+		"lambda:InvokeFunction",
+                "sts:AssumeRole"
+                
+            ],
+            "Principal":{
+                "Service": "lambda.amazonaws.com"
+            },
+            "Resource": "*"
+        }
+    ]
+}
